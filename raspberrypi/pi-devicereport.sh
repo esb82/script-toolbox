@@ -48,7 +48,6 @@ tput sgr 0
 #screenfetch
 
 
-
 echo -e "------------- ${RED}Time / Date (timedatectl status)${NC} -----------------------------------------------"
 timedatectl status
 
