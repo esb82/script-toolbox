@@ -47,6 +47,11 @@ tput sgr 0
 #https://github.com/KittyKatt/screenFetch
 #screenfetch
 
+
+
+echo -e "------------- ${RED}Time / Date (timedatectl status)${NC} -----------------------------------------------"
+timedatectl status
+
 echo -e "------------- ${RED}Hardware Informaion (cat /sys/firmware/devicetree/base/model)${NC} ------------------"
 cat /sys/firmware/devicetree/base/model
 echo -e ""
