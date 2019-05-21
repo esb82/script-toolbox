@@ -54,6 +54,10 @@ echo -e ""
 echo -e "------------- ${RED}CPU Informaion (cat /proc/cpuinfo)${NC} ---------------------------------------------"
 cat /proc/cpuinfo
 
+echo -e "------------- ${RED}Kernel  Informaion ${NC} ---------------------------------------------------------"
+cat /proc/version
+cat /proc/sys/kernel/{ostype,osrelease,version}
+
 echo -e "------------- ${RED}CPU Informaion (lscpu)${NC} ---------------------------------------------------------"
 lscpu
 
@@ -66,7 +70,8 @@ hostnamectl
 echo -e "------------- ${RED}Time / Date (timedatectl status)${NC} -----------------------------------------------"
 timedatectl status
 
-echo -e "------------- ${RED}Distribution (uname )${NC} --------------------------------------------------------"
+echo -e "------------- ${RED}Linux Distribution ${NC} ------------------------------------------------------------"
+
 
 #print the network node hostname
 uname --nodename
@@ -91,7 +96,8 @@ uname --operating-system
 
 
 echo -e "------------- ${RED}Distribution (lsb_release -a)${NC} --------------------------------------------------"
-lsb_release -a
+#lsb_release -a
+cat /etc/*-release
 
 echo -e "------------- ${RED}Debian Version (cat /etc/debian_version)${NC} ---------------------------------------"
 cat /etc/debian_version
