@@ -5,7 +5,6 @@
 bash <(curl -sL https://github.com/esb82/script-toolbox/raw/master/raspberrypi/pi-devicereport.sh)
 ```
 
-
 ```bash
                                       .    .:d0Ox;,,'.
                                   .:dOOOx:.OWWXKOxdx00k,..       .:,.
@@ -43,3 +42,7 @@ bash <(curl -sL https://github.com/esb82/script-toolbox/raw/master/raspberrypi/p
 ░░░░░░░░░░░░░░░░░░░░░░░▀▀░░▀▀▀░░▀░░▀▀▀░▀▀▀░▀▀▀░░░▀░▀░▀▀▀░▀░░░▀▀▀░▀░▀░░▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ```
 
+* pi-update.sh
+```bash
+bash <(curl -sL https://github.com/esb82/script-toolbox/raw/master/raspberrypi/pi-update.sh)
+```
