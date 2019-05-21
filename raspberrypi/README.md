@@ -1,10 +1,12 @@
-#!/bin/bash -e
-clear
-# Set color of logo
-RED='\033[0;31m'
-NC='\033[0m' # No Color
-tput setaf 3
-cat << EOF
+# Raspberry Pi - Devicereport
+
+* pi-devicereport.sh
+```bash
+bash <(curl -sL https://github.com/esb82/script-toolbox/raw/master/raspberrypi/pi-devicereport.sh)
+```
+
+
+```bash
                                       .    .:d0Ox;,,'.
                                   .:dOOOx:.OWWXKOxdx00k,..       .:,.
                               .;oOOOOOOOOOOOk0OOoocllol,'',:;..  oOKkkdo;.
@@ -39,77 +41,5 @@ cat << EOF
 ░░░░░░░░░░░░░░░░░░░░░░░█▀▄░█▀▀░█░█░▀█▀░█▀▀░█▀▀░░░█▀▄░█▀▀░█▀█░█▀█░█▀▄░▀█▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░█░█░█▀▀░▀▄▀░░█░░█░░░█▀▀░░░█▀▄░█▀▀░█▀▀░█░█░█▀▄░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░▀▀░░▀▀▀░░▀░░▀▀▀░▀▀▀░▀▀▀░░░▀░▀░▀▀▀░▀░░░▀▀▀░▀░▀░░▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-EOF
-# Reset color
-tput sgr 0
-
-
-#https://github.com/KittyKatt/screenFetch
-#screenfetch
-
-
-echo -e "------------- ${RED}Time / Date (timedatectl status)${NC} -----------------------------------------------"
-timedatectl status
-
-echo -e "------------- ${RED}Hardware Informaion (cat /sys/firmware/devicetree/base/model)${NC} ------------------"
-cat /sys/firmware/devicetree/base/model
-echo -e ""
-
-echo -e "------------- ${RED}CPU Informaion (cat /proc/cpuinfo)${NC} ---------------------------------------------"
-cat /proc/cpuinfo
-
-echo -e "------------- ${RED}Kernel  Informaion ${NC} ---------------------------------------------------------"
-cat /proc/version
-cat /proc/sys/kernel/{ostype,osrelease,version}
-
-echo -e "------------- ${RED}CPU Informaion (lscpu)${NC} ---------------------------------------------------------"
-lscpu
-
-echo -e "------------- ${RED}CPU Informaion 'number of processing units' (nprocu)${NC} ---------------------------"
-nproc
-
-echo -e "------------- ${RED}Host Information (hostnamectl)${NC} -------------------------------------------------"
-hostnamectl
-
-echo -e "------------- ${RED}Time / Date (timedatectl status)${NC} -----------------------------------------------"
-timedatectl status
-
-echo -e "------------- ${RED}Linux Distribution ${NC} ------------------------------------------------------------"
-
-
-#print the network node hostname
-uname --nodename
-
-#print the kernel release
-uname --kernel-release
-
-#print the kernel version
-uname --kernel-version
-
-#print the machine hardware name
-uname --machine
-
-#print the processor type (non-portable)
-uname --processor
-
-#print the hardware platform (non-portable)
-uname --hardware-platform
-
-#print the operating system
-uname --operating-system
-
-
-echo -e "------------- ${RED}Distribution (lsb_release -a)${NC} --------------------------------------------------"
-#lsb_release -a
-cat /etc/*-release
-
-echo -e "------------- ${RED}Debian Version (cat /etc/debian_version)${NC} ---------------------------------------"
-cat /etc/debian_version
-
-
-echo -e "------------- ${RED}Host Information (hostnamectl)${NC} -------------------------------------------------"
-hostnamectl
-
-echo -e "------------- ${RED}APT Source list (...) ${NC} ---------------------------------------------------------"
-cat /etc/apt/sources.list /etc/apt/sources.list.d/*
+```
 
