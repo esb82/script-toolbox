@@ -98,6 +98,9 @@ uname --hardware-platform
 #print the operating system
 uname --operating-system
 
+#print ...
+systemctl list-units --type=target
+systemctl list-units --type=service
 
 echo -e "------------- ${RED}Distribution (lsb_release -a)${NC} --------------------------------------------------"
 #lsb_release -a
@@ -113,3 +116,5 @@ hostnamectl
 echo -e "------------- ${RED}APT Source list (...) ${NC} ---------------------------------------------------------"
 cat /etc/apt/sources.list /etc/apt/sources.list.d/*
 
+echo -e "------------- ${Blue}Python list (ls -l /usr/bin/pyt*) ${NC} --------------------------------------------"
+ls -l /usr/bin/pyt*
