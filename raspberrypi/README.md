@@ -46,3 +46,8 @@ bash <(curl -sL https://github.com/esb82/script-toolbox/raw/master/raspberrypi/p
 ```bash
 bash <(curl -sL https://github.com/esb82/script-toolbox/raw/master/raspberrypi/pi-update.sh)
 ```
+
+* pi-sethostname.sh
+```bash
+bash <(curl -sL https://github.com/esb82/script-toolbox/raw/master/raspberrypi/pi-sethostname.sh) headless 3
+```
